@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Course Feedback</title>
+</head>
+<body>
+<!-- Error 1 (Line 21): </head> changed to </header> -->
+<!-- Error 2 (Line 32): <td>Rating</td> changed to <th>Rating</th> -->
+<!-- Error 3 (Line 38): missing </tr>  -->
+<!-- Error 4 (Line 41): colspan="3"change to colspan="2" -->
+<!-- Error 5 (Line 45): missing </td> after Semantic HTML -->
+<!-- Error 6 (Line 67): label for="name" does not match input id="fullname", changed to for="fullname" -->
+<!-- Error 7 (Line 73): radio name="good" not in the same group changed to name="rating" -->
+<!-- Error 8 (Line 78): radio name="poor" not in the same group  changed to name="rating" -->
+<!-- Error 9 (Line 81): label for="labs" does not match checkbox id="lab" change to for="lab" -->
+<!-- Error 10 (Line 98): </from> misspelledchangeit to </form> -->
+<!-- Error 11 (Line 113): &copy missing semicolon changed to &copy; -->
+<header>
+  <h1>CSF3133 Course Feedback</h1>
+</header>
+<!-- Navigation: link to Student Comments added -->
+<nav>
+  <a href="#results">Results</a> | <a href="#form">Feedback Form</a> | <a href="#comments">Student Comments</a>
+</nav>
+<section id="results">
+  <h2>Feedback Summary</h2>
+  <table border="1">
+    <tr>
+      <th>Week</th>
+      <th>Topic</th>
+      <th>Rating</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Introduction to HTML</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td colspan="2">Tables and Forms</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Semantic HTML</td><td>4.0</td>
+    </tr>
+    <!-- New rows: Week 4 and Week 5 share the topic Mini Project using rowspan="2" -->
+    <tr>
+      <td>4</td>
+      <td rowspan="2">Mini Project</td>
+      <td>4.3</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>4.6</td>
+    </tr>
+    <!-- New row: Average Rating using colspan="2" -->
+    <tr>
+      <td colspan="2">Average Rating</td>
+      <td>4.4</td>
+    </tr>
+  </table>
+</section>
+<section id="form">
+  <h2>Give Your Feedback</h2>
+  <form action="submit_feedback.php" method="post">
+    <label for="fullname">Name:</label>
+    <input type="text" id="fullname" name="name"><br>
+    <!-- New: E-mail input with matching label -->
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email"><br>
+    <label>Overall rating:</label><br>
+    <input type="radio" id="good" name="rating" value="good">
+    <label for="good">Good</label>
+    <!-- New: third radio option Average in the same group -->
+    <input type="radio" id="average" name="rating" value="average">
+    <label for="average">Average</label>
+    <input type="radio" id="poor" name="rating" value="poor">
+    <label for="poor">Poor</label><br>
+    <input type="checkbox" id="lab" name="lab" value="yes">
+    <label for="lab">I attended all labs</label><br>
+    <!-- New: checkboxes for Topics I want more practice on -->
+    <p>Topics I want more practice on:</p>
+    <input type="checkbox" id="tables" name="practice" value="tables">
+    <label for="tables">Tables</label><br>
+    <input type="checkbox" id="forms" name="practice" value="forms">
+    <label for="forms">Forms</label><br>
+    <input type="checkbox" id="semantic" name="practice" value="semantic">
+    <label for="semantic">Semantic HTML</label><br>
+    <!-- New: drop-down list for Section/Group -->
+    <label for="group">Section/Group:</label>
+    <select id="group" name="group">
+      <option value="g1">Group 1</option>
+      <option value="g2">Group 2</option>
+      <option value="g3">Group 3</option>
+    </select><br>
+    <input type="submit" value="Submit">
+  </form>
+</section>
+<!-- New section: Student Comments with two articles -->
+<section id="comments">
+  <h2>Student Comments</h2>
+  <article>
+    <h3>Aiman</h3>
+    <p>The table exercises were clear and easy to follow.</p>
+  </article>
+  <article>
+    <h3>Sara</h3>
+    <p>I would like more examples on forms and labels.</p>
+  </article>
+</section>
+<footer>
+  <p>Copyright &copy; 2026 CSF3133</p>
+</footer>
+</body>
+</html>

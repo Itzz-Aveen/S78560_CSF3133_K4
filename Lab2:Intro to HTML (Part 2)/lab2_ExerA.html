@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FSKM Programming Workshop 2026</title>
+</head>
+<body>
+
+<!-- Header: event name and tagline -->
+<header>
+  <h1>FSKM Programming Workshop 2026</h1>
+  <p>Learn, code and build together in one day.</p>
+</header>
+
+<!-- Navigation: internal links to each section -->
+<nav>
+  <a href="#about">About</a> |
+  <a href="#schedule">Schedule</a> |
+  <a href="#register">Register</a>
+</nav>
+
+<!-- Section 1: About the event, with two articles -->
+<section id="about">
+  <h2>About the Event</h2>
+  <p>A one-day workshop for students who want to improve their programming skills.</p>
+
+  <!-- Article 1: first speaker -->
+  <article>
+    <h3>Keynote Speaker: Dr. Hafiz Rahman</h3>
+    <p>Dr. Hafiz is a senior lecturer who will talk about careers in software development.</p>
+  </article>
+
+  <!-- Article 2: main activity -->
+  <article>
+    <h3>Activity: Hands-on Coding</h3>
+    <p>Students will build a simple web application with guidance from facilitators.</p>
+  </article>
+</section>
+
+<!-- Section 2: Event schedule table -->
+<section id="schedule">
+  <h2>Event Schedule</h2>
+  <table border="1">
+    <!-- Table header row -->
+    <tr>
+      <th>Time</th>
+      <th>Activity</th>
+      <th>Venue</th>
+      <th>Person in Charge</th>
+    </tr>
+    <tr>
+      <td>8:00 AM</td>
+      <td>Registration</td>
+      <td>Main Lobby</td>
+      <td>Ms. Aina</td>
+    </tr>
+    <!-- rowspan: two sessions in the same venue -->
+    <tr>
+      <td>9:00 AM</td>
+      <td>Opening Ceremony</td>
+      <td rowspan="2">Dewan Sultan Mizan</td>
+      <td>Dr. Hafiz</td>
+    </tr>
+    <tr>
+      <td>10:00 AM</td>
+      <td>Keynote Talk</td>
+      <td>Prof. Lim</td>
+    </tr>
+    <!-- colspan: lunch break spans three columns -->
+    <tr>
+      <td>12:30 PM</td>
+      <td colspan="3">Lunch Break</td>
+    </tr>
+    <tr>
+      <td>2:00 PM</td>
+      <td>Coding Session 1</td>
+      <td>Computer Lab 1</td>
+      <td>Mr. Faris</td>
+    </tr>
+    <tr>
+      <td>3:30 PM</td>
+      <td>Coding Session 2</td>
+      <td>Computer Lab 2</td>
+      <td>Ms. Nurul</td>
+    </tr>
+    <tr>
+      <td>5:00 PM</td>
+      <td>Closing and Prize Giving</td>
+      <td>Main Hall</td>
+      <td>Dr. Hafiz</td>
+    </tr>
+  </table>
+</section>
+
+<!-- Section 3: Registration form -->
+<section id="register">
+  <h2>Registration</h2>
+  <form action="register.html" method="post">
+
+    <!-- Text inputs with matching labels -->
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname"><br>
+
+    <label for="matric">Matric Number:</label>
+    <input type="text" id="matric" name="matric"><br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email"><br>
+
+    <!-- Radio buttons: same name so only one can be selected -->
+    <p>Year of Study:</p>
+    <input type="radio" id="year1" name="year" value="1">
+    <label for="year1">Year 1</label>
+    <input type="radio" id="year2" name="year" value="2">
+    <label for="year2">Year 2</label>
+    <input type="radio" id="year3" name="year" value="3">
+    <label for="year3">Year 3</label>
+    <input type="radio" id="year4" name="year" value="4">
+    <label for="year4">Year 4</label><br>
+
+    <!-- Checkboxes: sessions to join -->
+    <p>Sessions I want to join:</p>
+    <input type="checkbox" id="keynote" name="sessions" value="keynote">
+    <label for="keynote">Keynote Talk</label><br>
+    <input type="checkbox" id="coding1" name="sessions" value="coding1">
+    <label for="coding1">Coding Session 1</label><br>
+    <input type="checkbox" id="coding2" name="sessions" value="coding2">
+    <label for="coding2">Coding Session 2</label><br>
+
+    <!-- Drop-down list: programme -->
+    <label for="programme">Programme:</label>
+    <select id="programme" name="programme">
+      <option value="cs">Computer Science</option>
+      <option value="se">Software Engineering</option>
+      <option value="math">Mathematics</option>
+      <option value="stats">Statistics</option>
+    </select><br><br>
+
+    <!-- Submit button -->
+    <input type="submit" value="Register">
+  </form>
+</section>
+
+<!-- Footer: organiser and copyright -->
+<footer>
+  <p>Organised by the Computer Science Club, FSKM UMT</p>
+  <p>Copyright &copy; 2026 FSKM UMT</p>
+</footer>
+
+</body>
+</html>
