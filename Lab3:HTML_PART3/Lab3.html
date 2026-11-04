@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 3 - HTML5 Forms</title>
+</head>
+<body>
+
+<!-- Header Section -->
+<div id="header">
+  <h1>My HTML5 Webpage</h1>
+  <span>Simple forms, built the HTML5 way</span>
+</div>
+
+<!-- Content Section -->
+<div id="content">
+  <h2>Contact Form</h2>
+  <form>
+    <label>Email:
+      <input type="email" name="useremail" placeholder="you@example.com" required>
+    </label><br>
+    <label>Preferred contact date:
+      <input type="date" name="contactdate">
+    </label><br>
+    <label>Satisfaction level (0-10):
+      <input type="range" name="satisfaction" min="0" max="10" step="1" value="5">
+    </label><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- Inline Calculator -->
+  <div id="calculator">
+    <h2>Calculator</h2>
+    <form oninput="sum.value = (parseFloat(a.value) || 0) + (parseFloat(b.value) || 0)">
+      <input type="number" id="a" name="a" value="0"> +
+      <input type="number" id="b" name="b" value="0"> =
+      <output name="sum" for="a b">0</output>
+    </form>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<div id="footer">
+  <p>Contact: yourname@email.com | Tel: 012-345 6789</p>
+  <p>&copy; 2026 Your Name. All rights reserved.</p>
+</div>
+
+</body>
+</html>
+ 

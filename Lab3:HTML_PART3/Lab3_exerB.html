@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ticket Booking</title>
+</head>
+<body>
+<!-- Name: YOUR NAME | Matric Num: YOUR MATRIC NUMBER -->
+
+<!-- ERRORS fixed:
+  Error 1  (Line 1):  "<!DOCTYPE>" to "<!DOCTYPE html>".
+  Error 2  (Line 27): wrong order ("</h1></span>") to "</span></h1>".
+  Error 3  (Line 31): Content section uses <span>, an inline element, to hold block elements (h2, p, form). Changed to <div id="content">.
+  Error 4  (Line 33):  "<"  Replaced with "&lt;".
+  Error 5  (Line 33): "&amp" fixed to "&amp;".
+  Error 6  (Line 37): "adult.value + child.value" joins the values as text ("2" + "3" = "23"). Fixed with parseInt() so they are added as numbers.
+  Error 7  (Line 42): type="emial" is misspelled fixed to type="email".
+  Error 8  (Line 57/58): The input uses list="movies" but the datalist id is "movielist", so suggestions never appear. The ids now match (list="movielist").
+  Error 9  (Line 71): min="5" max="1" is reversed change to to min="1" max="5" step="1".
+  Error 10 (Line 73): output for="adult kid" to for="adult child".
+  Error 11 (Line 80): Closing </span> changed to </div> to match Error 3.
+  Error 12 (Line 95): "&Copy;" to "&copy;".
+-->
+
+<!-- HEADER -->
+<div id="header">
+  <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+</div>
+
+<!-- CONTENT -->
+<div id="content">
+  <h2>Book Your Ticket</h2>
+  <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+
+  <form action="booking.php" oninput="total.value = (parseInt(adult.value) || 0) + (parseInt(child.value) || 0); price.value = (parseInt(adult.value) || 0) * 12 + (parseInt(child.value) || 0) * 8">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email"><br>
+
+    <!-- NEW: phone number with placeholder and required -->
+    <label for="phone">Phone number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="012-3456789" required><br>
+
+    <label for="date">Show date:</label>
+    <input type="date" id="date" name="date"><br>
+
+    <!-- NEW: show time -->
+    <label for="showtime">Show time:</label>
+    <input type="time" id="showtime" name="showtime"><br>
+
+    <label for="movie">Movie:</label>
+    <input id="movie" name="movie" list="movielist"><br>
+    <datalist id="movielist">
+      <option value="Space Rangers">
+      <option value="Kampung Comedy">
+      <option value="Monsoon Mystery">
+    </datalist>
+
+    <label for="adult">Adult tickets:</label>
+    <input type="number" id="adult" name="adult" min="0" value="0"><br>
+
+    <label for="child">Child tickets:</label>
+    <input type="number" id="child" name="child" min="0" value="0"><br>
+
+    <label for="rating">Rate our service:</label>
+    <input type="range" id="rating" name="rating" min="1" max="5" step="1"><br>
+
+    Total tickets: <output name="total" for="adult child">0</output><br>
+
+    Total price: RM <output name="price" for="adult child">0</output><br>
+
+    <input type="submit" value="Book Now">
+  </form>
+</div>
+
+<!-- NEW SIDEBAR: Now Showing list. Each item uses strong (title), span (age rating) and a (trailer link) -->
+<div id="sidebar">
+  <h2>Now Showing</h2>
+  <ul>
+    <li><strong>Space Rangers</strong> <span>(P13)</span> <a href="https://www.youtube.com/results?search_query=space+rangers+trailer">Watch trailer</a></li>
+    <li><strong>Kampung Comedy</strong> <span>(U)</span> <a href="https://www.youtube.com/results?search_query=kampung+comedy+trailer">Watch trailer</a></li>
+    <li><strong>Monsoon Mystery</strong> <span>(18)</span> <a href="https://www.youtube.com/results?search_query=monsoon+mystery+trailer">Watch trailer</a></li>
+  </ul>
+</div>
+
+<!-- FOOTER: copyright, plus promo line using &reg;, &lt; and &amp; -->
+<div id="footer">
+  <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday for Students &amp; Staff</p>
+  <p>&copy; 2026 CineKampus. All rights reserved.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CampusBake - Online Pre-Order</title>
+</head>
+<body>
+
+<!-- HEADER: bakery name in <h1>, slogan in an inline <span> inside the <h1> -->
+<div id="header">
+  <h1>CampusBake&reg; <span>Freshly baked between lectures</span></h1>
+</div>
+
+<!-- NAV: three inline links separated by " | " -->
+<div id="nav">
+  <a href="#content">Home</a>&nbsp;|&nbsp;
+  <a href="#sidebar">Price List</a>&nbsp;|&nbsp;
+  <a href="#order">Order Now</a>
+</div>
+
+<!-- CONTENT: introduction, order form and price calculator -->
+<div id="content">
+  <h2>Welcome to CampusBake&reg;</h2>
+
+  <!-- Intro paragraph with four different inline elements: strong, em, span, a -->
+  <p>
+    We bake <strong>cupcakes</strong> and <em>cake slices</em> fresh every morning.
+    Pre-order before <span>10:00 a.m.</span> and collect your treats on campus.
+    See our <a href="#sidebar">price list</a> before you order.
+  </p>
+
+  <!-- ORDER FORM: HTML5 input types and attributes, plus the price calculator -->
+  <div id="order">
+    <h2>Order Form</h2>
+    <form oninput="total.value = (parseInt(cupcakes.value) || 0) * 3 + (parseInt(slices.value) || 0) * 5">
+
+      <!-- Customer details: placeholder, required and autofocus -->
+      <label for="custname">Customer name:</label>
+      <input type="text" id="custname" name="custname" placeholder="Enter your full name" required autofocus><br>
+
+      <label for="phone">Phone number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="012-3456789" required><br>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required><br>
+
+      <!-- Pick-up date and time -->
+      <label for="pickdate">Pick-up date:</label>
+      <input type="date" id="pickdate" name="pickdate"><br>
+
+      <label for="picktime">Pick-up time:</label>
+      <input type="time" id="picktime" name="picktime"><br>
+
+      <!-- Flavour: input linked to a datalist of suggestions -->
+      <label for="flavour">Flavour:</label>
+      <input id="flavour" name="flavour" list="flavours" placeholder="Choose or type a flavour"><br>
+      <datalist id="flavours">
+        <option value="Chocolate">
+        <option value="Vanilla">
+        <option value="Red Velvet">
+        <option value="Pandan">
+        <option value="Strawberry">
+      </datalist>
+
+      <!-- Icing colour and sweetness level (range slider 1 to 5) -->
+      <label for="icing">Icing colour:</label>
+      <input type="color" id="icing" name="icing" value="#ff99cc"><br>
+
+      <label for="sweetness">Sweetness level (1&ndash;5):</label>
+      <input type="range" id="sweetness" name="sweetness" min="1" max="5" step="1" value="3"><br>
+
+      <!-- PRICE CALCULATOR: cupcakes RM 3.00 each, cake slices RM 5.00 each -->
+      <h3>Price Calculator</h3>
+      <label for="cupcakes">Cupcakes (RM 3.00 each):</label>
+      <input type="number" id="cupcakes" name="cupcakes" min="0" value="0"><br>
+
+      <label for="slices">Cake slices (RM 5.00 each):</label>
+      <input type="number" id="slices" name="slices" min="0" value="0"><br>
+
+      <!-- Output shows the total automatically; "for" lists the inputs it depends on -->
+      Total price: RM&nbsp;<output name="total" for="cupcakes slices">0</output><br>
+
+      <input type="submit" value="Place Order">
+    </form>
+  </div>
+</div>
+
+<!-- SIDEBAR: price list and promotion, using entities -->
+<div id="sidebar">
+  <h2>Price List</h2>
+  <ul>
+    <li>Cupcake &ndash; RM&nbsp;3.00</li>
+    <li>Cake slice &ndash; RM&nbsp;5.00</li>
+    <li>Brownie &amp; Cookie Box &ndash; RM&nbsp;12.00</li>
+  </ul>
+  <p>Orders &gt; 10 pieces get a free drink!</p>
+</div>
+
+<!-- FOOTER: contact info and copyright entity -->
+<div id="footer">
+  <p>Contact: campusbake@umt.edu.my | Tel: 09-668 4000</p>
+  <p>&copy; 2026 CampusBake&reg;. All rights reserved.</p>
+</div>
+
+<!--
+  TESTING OBSERVATIONS:
+  1. Clicking "Place Order" with all fields empty: the form is not submitted.
+     The browser jumps to the first required field (Customer name) and shows
+     "Please fill out this field."
+  2. Entering "myemail" in the e-mail field and submitting again: the form is
+     still blocked. The browser shows a message saying the e-mail address must
+     include an "@", because type="email" checks the format automatically.
+  3. Calculator: 2 cupcakes + 1 cake slice shows a total of 11.
+-->
+</body>
+</html>
