@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Viewport: makes the page fit small screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Terengganu</title>
+
+  <!-- External CSS (most of the styles are here) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS: rules for this page only -->
+  <style>
+    /* ID selector: light background for the destinations section */
+    #destinations {
+      background-color: #E8F6F3;
+    }
+
+    /* ID selector: centre the video section */
+    #video {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header: page title and short tagline -->
+  <header>
+    <h1>Visit Terengganu</h1>
+    <p>Islands, lakes and culture on the east coast</p>
+  </header>
+
+  <!-- Navigation bar: unordered list with links to each section -->
+  <nav>
+    <ul>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#trip">Trip</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Section 1: Destinations with three articles -->
+  <section id="destinations">
+    <h2>Destinations</h2>
+
+    <article class="card">
+      <h3>Pulau Redang</h3>
+      <p>Clear blue water and coral reefs, great for snorkelling and diving.</p>
+      <p>Promotion: <span class="old-price">RM 299</span> <span class="new-price">RM 199</span></p>
+    </article>
+
+    <article class="card">
+      <h3>Tasik Kenyir</h3>
+      <p>A huge man-made lake with small islands, waterfalls and jungle trails.</p>
+      <p>Promotion: <span class="old-price">RM 150</span> <span class="new-price">RM 99</span></p>
+    </article>
+
+    <article class="card">
+      <h3>Masjid Kristal</h3>
+      <p>A mosque made of steel and glass in Kuala Terengganu, beautiful at night.</p>
+      <p>Promotion: <span class="old-price">RM 60</span> <span class="new-price">RM 40</span></p>
+    </article>
+  </section>
+
+  <!-- Section 2: Promotional video with caption -->
+  <section id="video">
+    <h2>Promotional Video</h2>
+    <figure>
+      <video width="400" height="300" controls>
+        <source src="terengganu.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>Discover the beauty of Terengganu.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Section 3: Trip seats and interest form -->
+  <section id="trip">
+    <h2>Join Our Trip</h2>
+
+    <!-- Meter: trip seats filled -->
+    <p>Seats filled:
+      <meter min="0" max="40" value="28">28 of 40</meter> 28 of 40
+    </p>
+
+    <!-- Trip interest form -->
+    <form class="trip-form" action="#" method="post">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label for="email">E-mail:</label><br>
+      <input type="email" id="email" name="email"><br><br>
+
+      <p>Traveller type:</p>
+      <input type="radio" id="student" name="traveller" value="student">
+      <label for="student">Student</label>
+      <input type="radio" id="staff" name="traveller" value="staff">
+      <label for="staff">Staff</label>
+      <input type="radio" id="public" name="traveller" value="public">
+      <label for="public">Public</label><br>
+
+      <p>Interests:</p>
+      <input type="checkbox" id="islands" name="interest" value="islands">
+      <label for="islands">Islands</label><br>
+      <input type="checkbox" id="food" name="interest" value="food">
+      <label for="food">Food</label><br>
+      <input type="checkbox" id="culture" name="interest" value="culture">
+      <label for="culture">Culture</label><br>
+      <input type="checkbox" id="nature" name="interest" value="nature">
+      <label for="nature">Nature</label><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <!-- Footer: copyright and contact e-mail -->
+  <footer id="contact">
+    <p>&copy; 2026 Visit Terengganu</p>
+    <address>
+      Contact us at <a href="mailto:tourism@terengganu.gov.my">tourism@terengganu.gov.my</a>
+    </address>
+  </footer>
+
+</body>
+</html>

@@ -1,32 +1,37 @@
-/* lab4.css - External CSS for lab4.html */
+/* style.css - External style sheet for lab4_ExerA.html */
 
-/* Element selector: whole page */
+/* Whole page */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  margin: 0;
   color: #333333;
+  background-color: #FFFFFF;
 }
 
-/* Header and footer */
+/* Header */
 header {
-  background-color: #98bf21;
+  background-color: #0E6655;
   color: #FFFFFF;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
-footer {
-  background-color: #98bf21;
-  color: #FFFFFF;
-  text-align: center;
-  padding: 10px;
+/* Text decoration on headings */
+h1 {
+  text-decoration: overline;
 }
 
-/* Navigation bar (from 4.6) */
+h2 {
+  text-decoration: underline;
+  color: #0E6655;
+}
+
+/* Navigation bar: no bullets, links in one row */
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  background-color: #117A65;
   text-align: center;
 }
 
@@ -34,41 +39,77 @@ li {
   display: inline-block;
 }
 
-/* Link states (from 4.8) */
+/* Navigation links: no underline, uppercase */
 nav a:link, nav a:visited {
   display: block;
-  font-weight: bold;
   color: #FFFFFF;
-  background-color: #7A991A;
-  width: 120px;
-  text-align: center;
-  padding: 4px;
+  background-color: #117A65;
+  padding: 10px 16px;
   text-decoration: none;
   text-transform: uppercase;
 }
 
+/* Navigation hover: change background colour */
 nav a:hover {
-  background-color: #556b12;
-  text-decoration: underline;
+  background-color: #F39C12;
 }
 
-nav a:active {
-  background-color: #FF0000;
-}
+/* Link states in the correct order: link, visited, hover, active */
+a:link {color: #1F618D;}
+a:visited {color: #7D3C98;}
+a:hover {color: #E67E22;}
+a:active {color: #C0392B;}
 
-/* Text decoration on headings (from 4.7) */
-h1 {
-  text-decoration: overline;
-}
-
-h2 {
-  text-decoration: underline;
-  color: #7A991A;
-}
-
-/* Class selector: used on the form */
-.form-box {
-  background-color: #FFFFFF;
+/* Sections use a percentage width so they fit small screens */
+section {
+  width: 90%;
+  margin: 0 auto;
   padding: 10px;
-  width: 300px;
+}
+
+/* Destination cards */
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #A2D9CE;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Old price is crossed out */
+.old-price {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+/* New price stands out */
+.new-price {
+  font-weight: bold;
+  font-size: 20px;
+  color: #C0392B;
+}
+
+/* Responsive video */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Trip form */
+.trip-form {
+  background-color: #FEF9E7;
+  padding: 15px;
+  border: 2px solid #F39C12;
+  width: 90%;
+}
+
+/* Footer */
+footer {
+  background-color: #0E6655;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 15px;
+}
+
+footer a:link, footer a:visited {
+  color: #F9E79F;
 }

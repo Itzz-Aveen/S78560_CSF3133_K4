@@ -1,0 +1,50 @@
+/* cafe.css - External style sheet for lab4_ExerB.html */
+
+/* Navigation bar (moved from the internal CSS): no bullets */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1A5276;
+}
+
+/* Menu items sit side by side */
+li {
+  display: inline-block;
+}
+
+/* Navigation links: blocks, no underline, uppercase */
+nav a:link, nav a:visited {
+  display: block;
+  background-color: #1A5276;
+  color: #FFFFFF;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Navigation hover: different background colour */
+nav a:hover {
+  background-color: #E67E22;
+}
+
+/* Old price is crossed out */
+.old-price {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+/* Responsive video */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Feedback form */
+.feedback-form {
+  background-color: #FDEBD0;
+  padding: 15px;
+  border: 2px solid #E67E22;
+  width: 90%;
+}
