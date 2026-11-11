@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 4 - Web Club</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" type="text/css" href="lab4.css">
+
+  <!-- Internal CSS -->
+  <style type="text/css">
+    /* ID selector  */
+    #caption {
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* Class selector  */
+    .center {
+      text-align: center;
+    }
+
+    /* Text decoration: line-through */
+    .old {
+      text-decoration: line-through;
+    }
+
+    /* Link states for links inside the page (from 4.8) */
+    section a:link {color: #FF0000;}
+    section a:visited {color: #00FF00;}
+    section a:hover {color: #FF00FF;}
+    section a:active {color: #0000FF;}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>CSF3133 Web Club</h1>
+    <p>Learning HTML and CSS together</p>
+  </header>
+
+  <!-- Navigation bar using an unordered list -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#join">Join Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Section 1: About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a group of students learning web design. We meet every week to practise HTML and CSS.</p>
+  </section>
+
+  <!-- Section 2: Video with caption -->
+  <section id="video">
+    <h2>Our example Video</h2>
+    <h3>Want to build a video like this in a Web ?</h3>
+    <div class="center">
+      <video width="400" height="300" controls>
+        <source src="upinipin.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p id="caption">Video: Upin &amp; Ipin</p>
+  </section>
+
+  <!-- Section 3: News using articles -->
+  <section id="news">
+    <h2>Club News</h2>
+    <article>
+      <h3>Workshop</h3>
+      <p>The meeting is now on <span class="old">Monday</span> Wednesday.</p>
+    </article>
+    <article>
+      <h3>Useful Link</h3>
+      <p>Learn more at <a href="https://www.w3schools.com" target="_blank">W3Schools</a>.</p>
+    </article>
+  </section>
+
+  <!-- Section 4: Form -->
+  <section id="join">
+    <h2>Join Us</h2>
+    <div class="form-box">
+      <form action="#" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+        <p>Favorite Hobbies:</p>
+        <input type="checkbox" id="reading" name="hobby" value="reading">
+        <label for="reading">Reading</label><br>
+        <input type="checkbox" id="sports" name="hobby" value="sports">
+        <label for="sports">Sports</label><br>
+        <input type="checkbox" id="games" name="hobby" value="games">
+        <label for="games">Games</label><br><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright &copy; 2026 CSF3133</p>
+  </footer>
+
+</body>
+</html>
