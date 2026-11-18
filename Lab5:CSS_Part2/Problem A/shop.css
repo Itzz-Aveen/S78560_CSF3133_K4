@@ -1,0 +1,133 @@
+/*
+   shop.css - Campus Bookstore
+ */
+
+/*  Page body: Roboto font, paper.gif shown once at the top right */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #2C2C2C;
+    background-image: url("paper.gif");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+/* Headings use the second Google Font */
+h1, h2 {
+    font-family: 'Merriweather', serif;
+}
+
+/* Paragraph readability  */
+p {
+    line-height: 1.6;
+}
+
+/* Header: background image covering the area, white text
+   A dark transparent layer sits on top of the image so the white text is readable */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("books.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    margin: 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    margin: 8px 0 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Navigation bar: dark horizontal bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Place the menu items side by side */
+li {
+    float: left;
+}
+
+/* Make the whole link area clickable */
+li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Darker background when the mouse is over a link */
+li a:hover {
+    background-color: #111;
+}
+
+/* Highlight the current page (Home) */
+li a.active {
+    background-color: #04AA6D;
+}
+
+/*  Main content area: limited width, centred  */
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0 30px;
+}
+
+h2 {
+    color: #1B4F72;
+}
+
+/* Product table  */
+#products {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Single borders and padding on every cell */
+#products td, #products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Grey background on even rows */
+#products tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Highlight a row when the mouse is over it */
+#products tr:hover {
+    background-color: #ddd;
+}
+
+/* Table header: green, uppercase and centred */
+#products th {
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Align the Price column to the right */
+#products td:last-child {
+    text-align: right;
+}
+
+/*  Footer: subtle background, centred text  */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
